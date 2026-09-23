@@ -115,6 +115,16 @@ async function con() {
 //     "title": "The Stranger",
 //     "year": 1942
 //     }
+// const AllBook=await book.find({$or:[{price:450},{authorName:"Paulo Coelho"}]}).toArray() // or oprator
+// const AllBook=await book.find({},{projection:{price:1,authorName:1,_id:0,author:1}}).toArray() // include projection
+// const AllBook=await book.find({},{projection:{authorName:0,_id:0,author:0}}).toArray() // exclude projection
+// const AllBook=await book.find({price:{$lt:350}},{projection:{authorName:0,_id:0,author:0}}).toArray() // exclude projection with condition
+// const AllBook=await book.find({price:{$lt:350}},{projection:{authorName:0,_id:0,author:0}}).sort({name:1}).toArray() // sort
+// const AllBook=await book.find({price:{$lt:350}},{projection:{authorName:0,_id:0,author:0}}).sort({name:-1}).toArray() // sort
+// const AllBook=await book.find({},{projection:{authorName:0,_id:0,author:0}}).limit(10).toArray() // limit
+// const AllBook=await book.find({},{projection:{authorName:0,_id:0,author:0}}).skip(15).toArray() // skip
+// const AllBook=await book.find({},{projection:{authorName:0,_id:0,author:0}}).sort({name:-1}).skip(5).limit(10).toArray() // projection & sort & limit &skip 
+// const AllBook=await book.findOne({authorName:"Paulo Coelho"}) //Returns One documents in that collection
 //         ]);
     
     // const  bDetails = await lib.find().toArray(); //retrieve data from db
