@@ -24,10 +24,15 @@ async function con() {
         // let age = await data.find().sort({price : 1}).toArray(); //Ascending order sort
         // console.log(age);
 
-        // let dsage = await data.find().sort({price : -1}).toArray(); //Ascending order sort
+        // let dsage = await data.find().sort({price : -1}).toArray(); //Descending order sort
         // console.log(dsage);
 
-        
+        // const skp  = await data.find().skip(2).toArray(); //Skip fields
+        // console.log(skp);
+
+        const lmt = await data.find().limit(2).toArray(); //Limit fields
+        console.log(lmt);
+
     }catch(err){
         console.log(err)
     }finally{
