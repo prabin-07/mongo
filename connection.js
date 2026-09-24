@@ -30,8 +30,14 @@ async function con() {
         // const skp  = await data.find().skip(2).toArray(); //Skip fields
         // console.log(skp);
 
-        const lmt = await data.find().limit(2).toArray(); //Limit fields
-        console.log(lmt);
+        // const lmt = await data.find().limit(2).toArray(); //Limit fields
+        // console.log(lmt);
+
+        // const f1 = await data.findOne({ name : "pen"}) //Find only one field that matches
+        // console.log(f1)
+
+        // const u1 = await data.updateOne({price : 20}, {$set : { name : "marker"}}) //Update one value
+        // console.log(u1);
 
     }catch(err){
         console.log(err)
