@@ -22,7 +22,8 @@ function askQ(query){
 async function main() {
     const name = await askQ("whats your name? ");
     const age = await askQ("whats your name? ");
-    console.log(`hello! ${name}. your age is : ${age}`);
+    console.log(`hello! ${name}. you're ${age}`);
     rl.close();
 }
+
 main();
