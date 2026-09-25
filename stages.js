@@ -16,22 +16,35 @@ async function con() {
         //     { _id: 6, customer: "John", product: "Monitor", amount: 300, city: "NYC" }
         // ]);
 
-        const grp = await data.aggregate([ //group data by customer names
-            {
-                $group : { _id : "$customer",totOrders : {$sum : 1}
-                }
-            }
-        ]).toArray();
-        console.log(grp);
+        // const grp = await data.aggregate([ //group data by customer names
+        //     {
+        //         $group : { _id : "$customer",totOrders : {$sum : 1}
+        //         }
+        //     }
+        // ]).toArray();
+        // console.log(grp);
 
-        const gp1 = await data.aggregate([ //Group data by expenditure
-            {
-                $group : { _id : "$customer",
-                    tSpent : { $sum : "$amount"}
-                }
-            }
-        ]).toArray();
-        console.log(gp1);
+        // const gp1 = await data.aggregate([ //Group data by expenditure
+        //     {
+        //         $group : { _id : "$customer",
+        //             tSpent : { $sum : "$amount"}
+        //         }
+        //     }
+        // ]).toArray();
+        // console.log(gp1);
+
+        // const multi = await data.aggregate([
+        //     {
+        //         $group : { _id : "$customer",
+        //         totalOrders : {$sum : 1},
+        //         totalSpent : {$sum : "$amount"},
+        //         avgAmt : {$avg : "$amount"},
+        //         minAmt : {$min : "$amount"},
+        //         maxAmt : {$max : "$amount"}
+        //         }
+        //     },
+        // ]).toArray();
+        // console.log(multi);
 
         
 
