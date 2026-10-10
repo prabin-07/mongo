@@ -46,7 +46,25 @@ async function con() {
         // ]).toArray();
         // console.log(multi);
 
-        
+        //Match
+        // const mtch = await data.aggregate([ //MatchBeforeGroup
+        //     {$match : {city : "NYC"}},
+        //     {$group : {_id : "$customer",
+        //         tSpent : {$sum : "$amount"}
+        //     }
+        //     }
+        // ]).toArray();
+        // console.log(mtch);
+
+        // const mtch = await data.aggregate([ //MatchAfterGroup
+        //     {
+        //         $group : {_id : "$customer",
+        //             tSpent : {$sum : "$amount"}
+        //         }
+        //     },
+        //     {$match : {tspent : {$gt : 1000}}}
+        // ]).toArray();
+        // console.log(mtch);
 
     }catch(err){
         console.log(err)
